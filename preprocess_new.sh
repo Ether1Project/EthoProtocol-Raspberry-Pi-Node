@@ -7,6 +7,9 @@ adduser ether1node
 usermod -aG sudo ether1node
 adduser ether1node systemd-journal
 
+update-alternatives --list iptables
+update-alternatives --set iptables /usr/sbin/iptables-legacy
+
 # Configuring firewall
 yes | ufw reset
 ufw allow 22/tcp
