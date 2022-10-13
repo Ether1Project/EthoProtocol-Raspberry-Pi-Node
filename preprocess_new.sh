@@ -1,5 +1,5 @@
 #! /bin/bash
-if test -f "$FILE"; then
+if test -f ".upgrade_done"; then
   echo "Stage 2 installer"
   # Configuring firewall
   yes | ufw reset
@@ -16,6 +16,7 @@ if test -f "$FILE"; then
 
   sleep 2
   fail2ban-client status
+  rm .upgrade_done
 else
   echo "Stage 1 installer"
   apt-get update
