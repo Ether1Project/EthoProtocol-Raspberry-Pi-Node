@@ -1,5 +1,5 @@
 #! /bin/bash
-if test -f ".upgrade_done"; then
+if test -f ".update_done"; then
   echo "Stage 2 installer"
   # Configuring firewall
   yes | ufw reset
