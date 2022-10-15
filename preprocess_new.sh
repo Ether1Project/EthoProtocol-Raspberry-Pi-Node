@@ -16,7 +16,8 @@ if test -f ".update_done"; then
 
   sleep 2
   fail2ban-client status
-  rm .upgrade_done
+  rm .update_done
+  reboot
 else
   echo "Stage 1 installer"
   apt-get update
