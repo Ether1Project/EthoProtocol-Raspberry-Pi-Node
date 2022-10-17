@@ -81,12 +81,12 @@ if [[ $CHECK_ARM == *arm* ]] || [[ $CHECK_ARM == *aarch* ]]; then
 else
   # Download node binary
   echo "AMD/Intel architecture detected"
-  wget https://nodes.ethoprotocol.com/download/etho-linux-2.0.1.tar.gz
-  tar -xvf etho-linux-2.0.1.tar.gz
+  wget https://nodes.ethoprotocol.com/download/etho-linux-2.1.0.tar.gz
+  tar -xvf etho-linux-2.1.0.tar.gz
   # Make node executable
   chmod +x geth
   # Remove and cleanup
-  rm etho-linux-2.0.1.tar.gz
+  rm etho-linux-2.1.0.tar.gz
   # Move Binaries
   sudo mv geth /usr/sbin/
 fi
